@@ -1,13 +1,6 @@
 package com.findnone.game.antworld.api;
 
-import com.findnone.game.antworld.domain.Square;
-
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
-import java.util.List;
+import com.findnone.game.antworld.domain.World;
 
 /**
  * Created by Duyong on 2016/2/26.
@@ -15,7 +8,44 @@ import java.util.List;
 
 public interface WorldService {
 
-    public String sayHello(@PathParam("a") String a);
+    /**
+     * 世界诞生
+     */
+    public World init(World world);
 
-    Square[][] worldStatus();
+    /**
+     * 世界毁灭
+     */
+    public void destory(World world);
+
+    /**
+     * 四季变化
+     */
+    //public World changeReason();
+
+    /**
+     * 昼夜变化
+     */
+    //public World changeDay();
+
+    /**
+     * 温度变化
+     */
+    public World changeTemperature(World world);
+
+    /**
+     * 光线变化
+     */
+
+    public World changeLight(World world);
+
+    /**
+     * 世界时间变化
+     */
+    public World stepOver(World world);
+
+    /**
+     * 世界状态
+     */
+//    public World getStatus();
 }

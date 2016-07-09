@@ -9,20 +9,20 @@
 
     <context:component-scan base-package="com.findnone.game.antworld.service"/>
     <context:property-placeholder location="classpath:antworld.properties"/>
-    <import resource="classpath:META-INF/cxf/cxf.xml"/>
-    <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
+    <!--<import resource="classpath:META-INF/cxf/cxf.xml"/>-->
+    <!--<import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>-->
 
 
-    <!-- Application resources -->
-    <jaxrs:server id="worldResource" address="/">
-        <jaxrs:serviceBeans>
-            <bean class="com.findnone.game.antworld.resource.WorldResource" />
-        </jaxrs:serviceBeans>
-        <jaxrs:extensionMappings>
-            <entry key="json" value="application/json"/>
-        </jaxrs:extensionMappings>
-        <jaxrs:providers>
-            <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
-        </jaxrs:providers>
-    </jaxrs:server>
+    <!--&lt;!&ndash; Application resources &ndash;&gt;-->
+    <!--<jaxrs:server id="worldResource" address="/">-->
+        <!--<jaxrs:serviceBeans>-->
+            <!--<bean class="com.findnone.game.antworld.resource.WorldResource" />-->
+        <!--</jaxrs:serviceBeans>-->
+        <!--<jaxrs:extensionMappings>-->
+            <!--<entry key="json" value="application/json"/>-->
+        <!--</jaxrs:extensionMappings>-->
+        <!--<jaxrs:providers>-->
+            <!--<bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />-->
+        <!--</jaxrs:providers>-->
+    <!--</jaxrs:server>-->
 </beans>
